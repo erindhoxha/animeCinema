@@ -198,7 +198,7 @@ h1 {
   font-size:20px;
 }
 .card .text {
-  height: 70px;
+  height: 120px;
   margin: 0;
 }
 .card input[type='checkbox'] {
@@ -208,11 +208,9 @@ h1 {
   -webkit-transform: translateY(-60px);
           transform: translateY(-60px);
 }
-
 .anime-logo {
   width:100px;
 }
-
 .example-1 .wrapper {
   background: url('../img/anime1.jpg') 20% 1%/cover no-repeat;
 }
@@ -296,7 +294,7 @@ h1 {
 .example-1 .menu-content li {
   width: 33.333333%;
   float: left;
-  background-color: #77d7b9;
+  background-color: $main-color;
   height: 60px;
   position: relative;
 }
@@ -835,7 +833,9 @@ nav {
   border-bottom:0.5px solid #ebebeb;
 }
 .container-quote {
-  height:40vh;
+  padding-top:50px;
+  padding-bottom:50px;
+  height: 100%;
   display:flex;
   justify-content: center;
   align-items:center;
@@ -843,7 +843,7 @@ nav {
 h1.quote {
   font-family: "Track";
   text-transform: uppercase;
-  font-size: 2em;
+  font-size: 21px;
   text-align:center;
   margin-top:20px;
   color: #fff;
@@ -855,7 +855,6 @@ h1.quote {
   margin:0 auto;
   color:white;
 }
-
 .aligned::before{
   content: "\201C";
   position: relative;
@@ -863,17 +862,14 @@ h1.quote {
   margin-left: -5%;
   
 }
-
 .aligned::after{
   content: "\201D";
 }
-
 .quoted {
   font-size: 1.6em;
   color: rgba(255,255,255,.5);
   font-family: courier, mono-space;
 }
-
 .img-list {
   width:100%;
 }
@@ -884,10 +880,12 @@ h1.quote {
   padding:10px 20px;
   margin-top:20px;
   font-family: Track;
+  cursor:pointer;
 }
 .btn-instant-nav {
   background-color:transparent !important;
   border:2px solid $main-color;
   color:$main-color;
   height: calc(2.25rem + 2px);
+  cursor:pointer;
 }
