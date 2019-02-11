@@ -13,14 +13,14 @@
   <!-- Place favicon.ico in the root directory -->
 
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main-dist.css">
-  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
-  <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/animate.css">
 </head>
 
 <body>
+  <div class="overlay">
+
   <nav class="navbar navbar-expand-xl">
     <div class="collapse navbar-collapse" id="navbarsExample06">
       <ul class="navbar-nav mr-auto">
@@ -57,8 +57,8 @@
           <div class="slider__inner">
             <div class="slider__contents" id="slider-1-bg">
               <div class="box">
-              <i class="slider__image fa fa-codepen"></i>
-              <h2 class="slider__caption">Cartoon 1</h2>
+              <img class="anime-logo" src="img/anime-logo.png" alt="">
+              <h2 class="slider__caption">Shadow of Death</h2>
               <p class="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis possimus illo quos, corporis minima!</p>
             </div>
             </div>
@@ -95,47 +95,48 @@
   <div class="slider">
       <div class="slide-track">
         <div class="slide">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+          <img src="img/logo1.png" height="100" width="250" alt="" />
         </div>
         <div class="slide">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+          <img src="img/logo3.png" height="100" width="250" alt="" />
         </div>
         <div class="slide">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+          <img src="img/logo4.png" height="100" width="250" alt="" />
         </div>
         <div class="slide">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+          <img src="img/logo5.png" height="100" width="250" alt="" />
         </div>
         <div class="slide">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+          <img src="img/logo6.svg" height="100" width="250" alt="" />
         </div>
         <div class="slide">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+          <img src="img/logo7.png" height="100" width="250" alt="" />
         </div>
         <div class="slide">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+          <img src="img/logo1.png" height="100" width="250" alt="" />
         </div>
         <div class="slide">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+          <img src="img/logo3.png" height="100" width="250" alt="" />
         </div>
         <div class="slide">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+          <img src="img/logo4.png" height="100" width="250" alt="" />
         </div>
         <div class="slide">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+          <img src="img/logo5.png" height="100" width="250" alt="" />
         </div>
         <div class="slide">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+          <img src="img/logo6.svg" height="100" width="250" alt="" />
         </div>
         <div class="slide">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+          <img src="img/logo7.png" height="100" width="250" alt="" />
         </div>
-        <div class="slide">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
-        </div>
-        <div class="slide">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
-        </div>
+      </div>
+    </div>
+
+    <div class="container container-quote">
+      <div class="row text-center quote-box">
+              <h4 class="quote-title">Star wars Quote of the day</h4>
+              <h1 class="quote aligned">I FOUND THERE WAS NO WAY TO LOOK THIN, HANG OUT WITH FAT PEOPLE.</h1>
       </div>
     </div>
 
@@ -147,11 +148,11 @@
                   <div class="date">
                     <span class="day">12</span>
                     <span class="month">Aug</span>
-                    <span class="year">2016</span>
+                    <span class="year">2019</span>
                   </div>
                   <div class="data">
                     <div class="content">
-                      <span class="author">Jane Doe</span>
+                      <span class="author">Shadow of Death</span>
                       <h1 class="title"><a href="#">Boxing icon has the will for a couple more fights</a></h1>
                       <p class="text">The highly anticipated world championship fight will take place at 10am and is the second major boxing blockbuster in the nation after 43 years.</p>
                       <label for="show-menu" class="menu-button"><span></span></label>
@@ -227,7 +228,10 @@
             </div>
         </div>
   </div>
+    
 
+  <!-- END OF OVERLAY -->
+</div>
 
   <script src="js/vendor/modernizr-3.6.0.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
