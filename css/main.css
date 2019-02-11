@@ -1,5 +1,6 @@
 /*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700,900");
+@import url("../fonts/Track-Regular.otf");
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
@@ -83,20 +84,20 @@ textarea {
    Author's custom styles
    ========================================================================== */
 nav {
-  background-color: black; }
-
-* {
-  box-sizing: border-box;
-  font-family: Montserrat; }
+  background-color: black;
+  font-family: Track; }
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.6); }
+
+.wrapper-2 {
+  background-image: url("../img/cover1.jpg"); }
 
 body {
   background-image: url("../img/bg.jpg");
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "Open Sans", sans-serif; }
+  font-family: 'Titillium Web'; }
 
 a {
   text-decoration: none; }
@@ -194,7 +195,7 @@ h1 {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #77d7b9;
+  background-color: #da0006;
   color: #fff;
   padding: 0.8em; }
 
@@ -286,7 +287,10 @@ h1 {
   top: -10px; }
 
 .example-2 .wrapper {
-  background: url(https://tvseriescritic.files.wordpress.com/2016/10/stranger-things-bicycle-lights-children.jpg) center/cover no-repeat; }
+  background: url("../img/cover1.jpg") center/cover no-repeat; }
+
+.example-2 .wrapper-3 {
+  background: url("../img/cover2.jpeg") center/cover no-repeat; }
 
 .example-2 .wrapper:hover .menu-content span {
   -webkit-transform: translate(-50%, -10px);
@@ -508,9 +512,10 @@ h1 {
 
 nav {
   margin: 0 auto;
-  padding: 0px 50px 0px 50px !important; }
+  padding: 0px 30px 0px 30px !important; }
   nav a {
-    padding: 20px !important;
+    padding: 15px !important;
+    font-size: 15px;
     color: white;
     font-weight: 500; }
   nav a:hover {
@@ -674,7 +679,8 @@ nav {
   font-weight: 500;
   margin: 2rem 0 1rem;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-family: Track; }
 
 .slider__txt {
   color: #999;
@@ -733,7 +739,7 @@ nav {
   align-items: center; }
 
 h1.quote {
-  font-family: "BureauGrotesque-OneSeven", Impact, sans-serif;
+  font-family: "Track";
   text-transform: uppercase;
   font-size: 2em;
   text-align: center;
@@ -760,5 +766,22 @@ h1.quote {
   font-size: 1.6em;
   color: rgba(255, 255, 255, 0.5);
   font-family: courier, mono-space; }
+
+.img-list {
+  width: 100%; }
+
+.btn-instant {
+  background-color: transparent;
+  border: 2px solid #da0006;
+  color: #da0006;
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-family: Track; }
+
+.btn-instant-nav {
+  background-color: transparent !important;
+  border: 2px solid #da0006;
+  color: #da0006;
+  height: calc(2.25rem + 2px); }
 
 /*# sourceMappingURL=main.css.map */
