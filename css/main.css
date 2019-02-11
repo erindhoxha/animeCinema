@@ -507,9 +507,8 @@ h1 {
   color: white; }
 
 nav {
-  width: 80%;
   margin: 0 auto;
-  padding: 0px !important; }
+  padding: 0px 50px 0px 50px !important; }
   nav a {
     padding: 20px !important;
     color: white;
