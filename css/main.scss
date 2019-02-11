@@ -881,11 +881,17 @@ h1.quote {
   margin-top:20px;
   font-family: Track;
   cursor:pointer;
+  transition:0.3s ease-out;
+}
+.btn-instant:hover, .btn-instant-nav:hover {
+  background-color:$main-color;
+  color:black;
 }
 .btn-instant-nav {
-  background-color:transparent !important;
+  background-color:transparent;
   border:2px solid $main-color;
   color:$main-color;
   height: calc(2.25rem + 2px);
   cursor:pointer;
+  transition:0.3s ease-in;
 }

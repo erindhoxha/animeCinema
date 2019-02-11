@@ -779,13 +779,19 @@ h1.quote {
   padding: 10px 20px;
   margin-top: 20px;
   font-family: Track;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: 0.3s ease-out; }
+
+.btn-instant:hover, .btn-instant-nav:hover {
+  background-color: #da0006;
+  color: black; }
 
 .btn-instant-nav {
-  background-color: transparent !important;
+  background-color: transparent;
   border: 2px solid #da0006;
   color: #da0006;
   height: calc(2.25rem + 2px);
-  cursor: pointer; }
+  cursor: pointer;
+  transition: 0.3s ease-in; }
 
 /*# sourceMappingURL=main.css.map */
