@@ -26,7 +26,7 @@
   </div>
 
   <div class="shopping-cart-box">
-    <div class="row" id="shopping-cart-box">
+    <div class="row" style="width:100%" id="shopping-cart-box">
     </div>
   </div>
 
@@ -310,9 +310,12 @@
 
 <script id="cart-list" type="text/x-handlebars-template">
   {{#each shoppingCartChild}}
-  <div class="col-lg-12 ">
+  <div class="col-lg-2 ">
     <img class="pl-2 pt-2" src="{{img}}" height="100" alt="" />
   </div>
+  <div class="col-lg-10 pt-2 pl-4">
+      <h6>Naruto Book</h6>
+    </div>
   {{/each}}
 </script>
 

@@ -43,8 +43,8 @@ $(".book-wrapper").on('click', function() {
 }, 2000);
 })
 
-// $(".shopping-cart").hide();
-// $(".shopping-cart-box").hide();
+$(".shopping-cart").hide();
+$(".shopping-cart-box").hide();
 
 $(".shopping-cart").on('click', function() {
     $(".shopping-cart-box").slideToggle();
