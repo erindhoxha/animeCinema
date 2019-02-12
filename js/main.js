@@ -13,3 +13,7 @@ xhttp.open("GET", "http://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQ
 xhttp.send();
 
 
+$(".book-wrapper").on('click', function() {
+   $(this).toggleClass('animate hinge');
+   setTimeout(function(){ $(".book-wrapper").removeClasss('animate hinge') }, 1000);
+})

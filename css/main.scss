@@ -895,3 +895,102 @@ h1.quote {
   cursor:pointer;
   transition:0.3s ease-in;
 }
+
+.context-dark, .bg-gray-dark, .bg-primary {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-classic a, .footer-classic a:focus, .footer-classic a:active {
+  color: #ffffff;
+}
+.nav-list li {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.nav-list li a:hover:before {
+  margin-left: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 23px;
+  font: 900 13px/1 "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+.social-container .col {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.nav-list li a:before {
+  content: "\f14f";
+  font: 400 21px/1 "Material Design Icons";
+  color: #4d6de6;
+  display: inline-block;
+  vertical-align: baseline;
+  margin-left: -28px;
+  margin-right: 7px;
+  opacity: 0;
+  visibility: hidden;
+  transition: .22s ease;
+}
+
+
+
+// BOOKSHELF
+
+// variables
+$darktan: rgb(0, 0, 0);
+$grad2: #373737;
+$grad1: darken($grad2, 2);
+$grad3: lighten($darktan, 4);
+$grad5: darken($darktan, 4);
+
+.bookshelf--frame {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bookshelf--frame {
+	background: tan;
+	background: url('https://static.tumblr.com/8x9m588/C8ho55ylx/bg-wood2.png'), linear-gradient($grad1,$grad2 290px,$grad3 290px,$grad3 292px,$darktan 292px,$darktan 298px,$grad5 298px,$grad5 300px);	
+	background-size: auto, 10px 300px;
+	border-left: 10px solid $darktan;
+  border-right: 10px solid $darktan;
+  border-top:10px solid $darktan;
+	text-align: center;
+	&:first-of-type {
+		border-top: 10px solid $darktan;
+	}
+	.book-wrapper {
+		display: inline-block;
+		width: 290px;
+		vertical-align: bottom;
+		height: 280px;
+		position: relative;
+		margin: 10px 0;
+		max-width: 100%;
+		img {
+      height: auto;
+      width: auto;
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+      transform: translateX(-50%);
+			max-height: 100%;
+      max-width: 100%;
+      box-shadow: 6px -2px 10px black;
+		}
+	}
+}
