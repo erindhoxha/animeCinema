@@ -11,9 +11,15 @@ xhttp.onreadystatechange = function() {
 };
 xhttp.open("GET", "http://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote", true);
 xhttp.send();
-
-
+var thisIs;
+var count = 0;
 $(".book-wrapper").on('click', function() {
+   count++;
+   console.log(count);
+   thisIs = $(this)
    $(this).toggleClass('animate hinge');
-   setTimeout(function(){ $(".book-wrapper").removeClasss('animate hinge') }, 1000);
+   setTimeout(function(){ 
+    $(".book-wrapper").removeClass('animate hinge') 
+    thisIs.css('visibility','hidden');
+}, 2000);
 })
