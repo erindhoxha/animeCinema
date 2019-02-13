@@ -130,9 +130,15 @@
       <div class="row text-white" id="anime-movie">
 
       </div>
+      <div class="row text-white" id="anime-movie-playing-soon">
+
+        </div>
     </div>
 
-  <div class="container banner-bg">
+
+
+
+  <div class="container banner-bg news-div">
       <div class="row mt-5">
 
 
@@ -228,32 +234,33 @@
 <div class="container">
 
   <div class="bookshelf--frame mt-5">
-      <div class="book-wrapper">
+      <div class="book-wrapper book-hinge" data-nr="0">
         <img src="img/book1.jpg" width="300" height="500" alt="A tall book">
       </div>
-      <div class="book-wrapper">
+      <div class="book-wrapper book-hinge" data-nr="1">
         <img src="img/book2.jpg" width="250" height="350" alt="A normal book">
       </div>
-      <div class="book-wrapper">
+      <div class="book-wrapper book-hinge" data-nr="2">
         <img src="img/book3.jpg" width="400" height="280" alt="A wide book">
       </div>
-      <div class="book-wrapper">
-        <img src="img/book4.jpg" width="250" height="350" alt="A normal book"></div>
-      <div class="book-wrapper">
-        <img src="img/book5.jpeg" width="250" height="350" alt="A normal book">
+      <div class="book-wrapper book-hinge" data-nr="3">
+        <img src="img/book4.jpg" width="250" height="350" alt="A normal book">
       </div>
-      <div class="book-wrapper">
+      <div class="book-wrapper book-hinge" data-nr="4">
         <img src="img/book6.jpg" width="300" height="500" alt="A tall book">
       </div>
-      <div class="book-wrapper">
+      <div class="book-wrapper book-hinge" data-nr="5">
         <img src="img/book7.jpg" width="400" height="280" alt="A wide book">
       </div>  
-    <div class="book-wrapper">
+    <div class="book-wrapper book-hinge" data-nr="6">
         <img src="img/book1.jpg" width="400" height="280" alt="A wide book">
       </div>  
-    <div class="book-wrapper">
+    <div class="book-wrapper book-hinge" data-nr="7">
         <img src="img/book2.jpg" width="400" height="280" alt="A wide book">
-      </div>  
+      </div> 
+      <div class="book-wrapper book-hinge" data-nr="8">
+          <img src="img/book5.jpeg" width="250" height="350" alt="A normal book">
+        </div>
     </div>
       
 </div>
@@ -320,12 +327,23 @@
 
 <script id="cart-list" type="text/x-handlebars-template">
   {{#each shoppingCartChild}}
-  <div class="col-lg-2 ">
-    <img class="pl-2 pt-2" src="{{img}}" height="100" alt="" />
-  </div>
-  <div class="col-lg-10 pt-2 pl-4">
-      <h6>Naruto Book</h6>
+  <div class="col-lg-12 col-md-2" data-nr={{data-nr}}>
+    <div class="row">
+    <div class="col-lg-3 col-md-6 text-white">
+    <img class="" src="{{img}}" height="100" alt="" />
     </div>
+    <div class="col-lg-5 text-white">
+        <h6>Naruto Book</h6>
+        <button>+</button>
+        <button>-</button>
+    </div>
+    <div class="col-lg-4 col-md-6 text-white">
+        <button class="remove-item">Remove Item</button>
+    </div>
+  </div>
+  </div>
+
+
   {{/each}}
 </script>
 
@@ -365,6 +383,13 @@
   var templateMovieScript = Handlebars.compile(templateMovie);
   var htmlMovie = templateMovieScript(animeMovieListParent);
   $("#anime-movie").append(htmlMovie);
+
+  var templateMoviePlayingSoon = $("#anime-movie-playing-soon").html();
+  var templateMovieScript = Handlebars.compile(templateMovie);
+  var htmlMovie = templateMovieScript(animeMovieListParent);
+  $("#anime-movie").append(htmlMovie);
+
+  
 
   function renderCartList() {
     var templateCart = $("#cart-list").html();

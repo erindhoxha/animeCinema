@@ -869,6 +869,7 @@ ul, ol {
   .bookshelf--frame:first-of-type {
     border-top: 10px solid black; }
   .bookshelf--frame .book-wrapper {
+    cursor: pointer;
     display: inline-block;
     width: 290px;
     vertical-align: bottom;
@@ -907,20 +908,24 @@ ul, ol {
   right: 0; }
 
 .shopping-cart-box {
-  overflow: scroll;
+  overflow: auto;
   border-radius: 10px;
   z-index: 2;
   height: 500px;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.8);
   width: 400px;
   position: fixed;
   bottom: 60px;
   right: 60px; }
 
 .playing-now-box {
-  height: 50vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column; }
+
+.news-div {
+  margin-top: 10%;
+  margin-bottom: 10%; }
 
 /*# sourceMappingURL=main.css.map */

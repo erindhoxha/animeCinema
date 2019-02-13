@@ -17,14 +17,18 @@ var count = 0;
 var clicked = false;
 var imageName;
 
-$(".book-wrapper").on('click', function() {
+$(".book-hinge").on('click', function() {
     thisIs = $(this)
     var clicked = true;
 
-    imageName = $(this).find('img').attr('src');
+    console.log($(this).attr('data-nr'))
+    var dataNr = $(this).attr('data-nr');
 
+    imageName = $(this).find('img').attr('src');
+    $(this).removeClass('book-hinge');
     var imageObject = {'img': imageName};
-    shoppingCart.shoppingCartChild[shoppingCart.shoppingCartChild.length] = {...shoppingCart.shoppingCartChild[shoppingCart.shoppingCartChild.length], ...imageObject};
+    var dataNumber = {'data-nr': dataNr};
+    shoppingCart.shoppingCartChild[shoppingCart.shoppingCartChild.length] = {...shoppingCart.shoppingCartChild[shoppingCart.shoppingCartChild.length], ...imageObject, ...dataNumber};
     $("#shopping-cart-box").empty();
     renderCartList();
     if (clicked == true) {
@@ -37,14 +41,20 @@ $(".book-wrapper").on('click', function() {
         // do nothing
     }
 
+    $(".remove-item").on('click', function() {
+        console.log($(this).parent().parent().parent().attr('data-nr'));
+    })
+
    setTimeout(function(){ 
-    $(".book-wrapper").removeClass('animate hinge') 
+    $(".book-hinge").removeClass('animate hinge') 
     thisIs.css('visibility','hidden');
 }, 2000);
 })
 
-$(".shopping-cart").hide();
-$(".shopping-cart-box").hide();
+
+
+// $(".shopping-cart").hide();
+// $(".shopping-cart-box").hide();
 
 $(".shopping-cart").on('click', function() {
     $(".shopping-cart-box").slideToggle();
