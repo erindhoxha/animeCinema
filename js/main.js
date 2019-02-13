@@ -42,7 +42,9 @@ $(".book-hinge").on('click', function() {
     }
 
     $(".remove-item").on('click', function() {
-        console.log($(this).parent().parent().parent().attr('data-nr'));
+        var dataNr = $(this).parent().parent().parent().attr('data-nr');
+        $('.book-wrapper[data-nr="' + dataNr + '"]').addClass('animate hinge');
+        $('.book-wrapper[data-nr="' + dataNr + '"]').css('visibility','visible');
     })
 
    setTimeout(function(){ 
