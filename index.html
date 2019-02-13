@@ -49,7 +49,7 @@
               <a class="nav-link" href="#">TV Shows</a>
               </li>
               <li class="nav-item">
-              <a class="nav-link" href="#">Anime API</a>
+              <a class="nav-link" href="http://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote" target="_blank"> Quotes API</a>
               </li>
               <li class="nav-item">
               <a class="nav-link" href="#">Browse By Genre</a>
@@ -393,8 +393,9 @@
   $("#anime-movie").append(htmlMovie);
 
   
-
+var isItTrue = false;
   function renderCartList() {
+    isItTrue = true;
     var templateCart = $("#cart-list").html();
     var templateCartScript = Handlebars.compile(templateCart);
     var htmlCart = templateCartScript(shoppingCart);

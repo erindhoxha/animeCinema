@@ -36,8 +36,11 @@ $(".book-hinge").on('click', function() {
     count++;
     $(".shopping-cart").show(200);
     $(".badge-shopping-cart").text(count);
- 
+    if ($("#shopping-cart-box").children().length == 0) {
+        shoppingCart.shoppingCartChild = [];
+    }
     $(".remove-item").on('click', function() {
+
         count--;
         $(".badge-shopping-cart").text(count);
 
@@ -48,12 +51,18 @@ $(".book-hinge").on('click', function() {
         
         $('.book-wrapper[data-nr="' + dataNr + '"]').css('visibility','visible');
         shoppingCart.shoppingCartChild.splice(dataIndex, 1);
-        $(this).parent().parent().parent().hide();
+        $(this).parent().parent().parent().remove();
+        if ($("#shopping-cart-box").children().length == 0) {
+            shoppingCart.shoppingCartChild = [];
+        }
     })
 
     $(".book-hinge").removeClass('animate hinge') 
     thisIs.css('visibility','hidden');
 })
+
+
+
 
 
 
