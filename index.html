@@ -53,9 +53,6 @@
               <a class="nav-link" href="#">Browse By Genre</a>
               </li>
               <li class="nav-item">
-              <a class="nav-link" href="#">Search</a>
-              </li>
-              <li class="nav-item">
               <a class="nav-link" href="#">Latest Episodes</a>
               </li>
               <li class="nav-item">
@@ -84,29 +81,31 @@
               <button class="btn-instant">Watch instantly</button>
             </div>
             </div>
-            <div class="slider__contents" id="slider-1-bg">
+            <div class="slider__contents" id="slider-2-bg">
               <div class="box">
-                  <i class="slider__image fa fa-newspaper-o"></i>
-                  <h2 class="slider__caption">newspaper-o</h2>
-                  <p class="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis possimus illo quos, corporis minima!</p>    
+                <img class="anime-logo" src="img/onepiecelogo.png" alt="">
+                <h2 class="slider__caption">One Piece</h2>
+                <p class="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis possimus illo quos, corporis minima!</p>
+                <button class="btn-instant">Watch instantly</button>
               </div>
             </div>
-            <div class="slider__contents" id="slider-1-bg">
 
-
+            <div class="slider__contents" id="slider-3-bg">
               <div class="box">
-              <i class="slider__image fa fa-television"></i>
-              <h2 class="slider__caption">television</h2>
-              <p class="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis possimus illo quos, corporis minima!</p>
+                <img class="anime-logo" src="img/deathnotelogo.png" alt="">
+                <h2 class="slider__caption">Death Note</h2>
+                <p class="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis possimus illo quos, corporis minima!</p>
+                <button class="btn-instant">Watch instantly</button>
             </div>
 
             </div>
-            <div class="slider__contents" id="slider-1-bg">
+            <div class="slider__contents" id="slider-4-bg">
 
               <div class="box">
-              <i class="slider__image fa fa-diamond"></i>
-              <h2 class="slider__caption">diamond</h2>
-              <p class="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis possimus illo quos, corporis minima!</p>
+                <img class="anime-logo" src="img/dragonballzlogo.png" alt="">
+                <h2 class="slider__caption">Dragon Ball Z</h2>
+                <p class="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis possimus illo quos, corporis minima!</p>
+                <button class="btn-instant">Watch instantly</button>
             </div>
             </div>
           </div>
@@ -126,8 +125,8 @@
       </div>
     </div>
 
-    <div class="container">
-        <h1 class="m-0 p-0 text-white">Playing now</h1>
+    <div class="container playing-now-box">
+        <h3 class="m-0 p-0 text-white">Playing now</h3>
       <div class="row text-white" id="anime-movie">
 
       </div>
@@ -137,10 +136,9 @@
       <div class="row mt-5">
 
 
-          <div class="col-lg-4">
+          <div class="col-lg-4 col-sm-12 mt-5 pt-5">
               <div class="example-2 card">
                   <div class="overlay-wrapper">
-
                   <div class="wrapper wrapper-2">
                     <div class="header">
                       <div class="date">
@@ -169,7 +167,7 @@
                 </div>
             </div>
 
-        <div class="col-lg-4">
+        <div class="col-lg-4 mt-5 pt-5">
             <div class="example-1 card">
                 <div class="wrapper">
                   <div class="date">
@@ -196,7 +194,7 @@
                 </div>
               </div>
         </div>
-        <div class="col-lg-4 mb-5">
+        <div class="col-lg-4 mb-5 mt-5 pt-5">
             <div class="example-2 card">
                 <div class="wrapper wrapper-3">
                   <div class="header">
@@ -334,7 +332,7 @@
 
 <script id="movies-anime" type="text/x-handlebars-template">
   {{#each animeMovieList}}
-  <div class="col-lg-2 col-sm-4 mt-5 col-4 text-center">
+  <div class="col-lg-2 col-sm-4 mt-2 col-4 text-center">
       <a href="{{href}}">
         <img class="img-list" style="width:100%" src="{{img}}" alt="">
       </a>
