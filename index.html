@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/modal-video.min.css">
+
 </head>
 
 <body>
@@ -66,6 +68,7 @@
           </div>      
         </nav>
 
+
   <div class="banner-bg-hero">
       <div class="slider-new">
           <input type="radio" name="slider" title="slidee1" checked="checked" class="slider__nav"/>
@@ -78,7 +81,7 @@
               <img class="anime-logo" src="img/anime-logo.png" alt="">
               <h2 class="slider__caption">Shadow of Death</h2>
               <p class="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis possimus illo quos, corporis minima!</p>
-              <button class="btn-instant">Watch instantly</button>
+              <button class="btn-instant js-modal-btn" data-video-id="202177974">Watch instantly</button>
             </div>
             </div>
             <div class="slider__contents" id="slider-2-bg">
@@ -247,20 +250,20 @@
         <img src="img/book4.jpg" width="250" height="350" alt="A normal book">
       </div>
       <div class="book-wrapper book-hinge" data-nr="4">
-        <img src="img/book6.jpg" width="300" height="500" alt="A tall book">
-      </div>
-      <div class="book-wrapper book-hinge" data-nr="5">
         <img src="img/book7.jpg" width="400" height="280" alt="A wide book">
       </div>  
-    <div class="book-wrapper book-hinge" data-nr="6">
-        <img src="img/book1.jpg" width="400" height="280" alt="A wide book">
-      </div>  
-    <div class="book-wrapper book-hinge" data-nr="7">
+    <div class="book-wrapper book-hinge" data-nr="5">
         <img src="img/book2.jpg" width="400" height="280" alt="A wide book">
       </div> 
-      <div class="book-wrapper book-hinge" data-nr="8">
+      <div class="book-wrapper book-hinge" data-nr="6">
           <img src="img/book5.jpeg" width="250" height="350" alt="A normal book">
         </div>
+        <div class="book-wrapper book-hinge" data-nr="7">
+            <img src="img/book1.jpg" width="250" height="350" alt="A normal book">
+          </div>
+          <div class="book-wrapper book-hinge" data-nr="8">
+              <img src="img/book2.jpg" width="250" height="350" alt="A normal book">
+            </div>
     </div>
       
 </div>
@@ -327,7 +330,7 @@
 
 <script id="cart-list" type="text/x-handlebars-template">
   {{#each shoppingCartChild}}
-  <div class="col-lg-12 col-md-2" data-nr={{data-nr}}>
+  <div class="col-lg-12 col-md-2 shopping-cart-div" data-index={{@index}} data-nr={{data-nr}}>
     <div class="row">
     <div class="col-lg-3 col-md-6 text-white">
     <img class="" src="{{img}}" height="100" alt="" />
@@ -398,6 +401,8 @@
     $("#shopping-cart-box").append(htmlCart);
   }
 
+
+
 </script>
 
 
@@ -407,7 +412,12 @@
     ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async defer></script>
-
+  <script src="js/modal-video.min.js"></script>
+  <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="js/jquery-modal-video.js"></script>
+  <script type="text/javascript">
+    $(".js-modal-btn").modalVideo({channel:'vimeo'});
+  </script>
 </body>
 
 </html>
