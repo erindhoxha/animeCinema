@@ -1,10 +1,10 @@
-$( document ).ready(function() {
-    $(".hide-everything").fadeOut(300);
-    setTimeout(function() {
-        $(".loading").fadeOut(300);
-    $(".hide-everything").fadeIn(300);
-    }, 2000)
-});
+// $( document ).ready(function() {
+//     $(".hide-everything").fadeOut(300);
+//     setTimeout(function() {
+//         $(".loading").fadeOut(300);
+//     $(".hide-everything").fadeIn(300);
+//     }, 2000)
+// });
 
 var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
@@ -27,10 +27,17 @@ var imageName;
 
 $(".book-hinge").on('click', function() {
 
+    setTimeout(function() {
+        thisIs.css('visibility','hidden');
+        thisIs.removeClass('animate hinge');
+    }, 2000);
+
     thisIs = $(this);
     var dataNr = $(this).attr('data-nr');
     imageName = $(this).find('img').attr('src');
-    $(this).removeClass('book-hinge');
+    $(this).addClass('animate hinge');
+
+
 
     var imageObject = {'img': imageName};
     var dataNumber = {'data-nr': dataNr};
@@ -40,7 +47,7 @@ $(".book-hinge").on('click', function() {
 
     $("#shopping-cart-box").empty();
     renderCartList();
-    $(this).css('visibility','hidden');
+
     console.log(dataNr);
     countOfShoppingCart++;
     $(".shopping-cart").show(200);
@@ -62,6 +69,7 @@ $(".book-hinge").on('click', function() {
         console.log(dataIndex);
         
         $('.book-wrapper[data-nr="' + dataNr + '"]').css('visibility','visible');
+        $('.book-wrapper[data-nr="' + dataNr + '"]').addClass('animate bounceIn');
         shoppingCart.shoppingCartChild.splice(dataIndex, 1);
         $(this).parent().parent().parent().remove();
         if ($("#shopping-cart-box").children().length == 0) {
@@ -69,8 +77,7 @@ $(".book-hinge").on('click', function() {
         }
     })
 
-    $(".book-hinge").removeClass('animate hinge') 
-    thisIs.css('visibility','hidden');
+
 
     $(".button-minus-sp").on('click', function(){
         var dataNr = $(this).parent().parent().parent().attr('data-index');
@@ -99,6 +106,7 @@ $(".book-hinge").on('click', function() {
         console.log(dataNr);
         console.log(countNr);
     });
+
 })
 
 
