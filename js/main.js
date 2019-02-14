@@ -60,8 +60,14 @@ $(".book-hinge").on('click', function() {
         shoppingCart.shoppingCartChild = [];
     }
     $(".remove-item").on('click', function() {
+        if (countOfShoppingCart == 1) {
+            $(".shopping-cart").hide();
+            $(".shopping-cart-box").hide();
+        }
         if (countOfShoppingCart == 0) {
             countOfShoppingCart = 0;
+            $(".shopping-cart").hide();
+            $(".shopping-cart-box").hide();
         } else {
             countOfShoppingCart--;
         }
@@ -112,6 +118,7 @@ $(".book-hinge").on('click', function() {
     });
 
 })
+
 
 $(".shopping-cart").hide();
 $(".shopping-cart-box").hide();

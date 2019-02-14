@@ -101,7 +101,19 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-   
+.button-box {
+  button {
+    background-color:green;
+    border:none;
+    color:#fff;
+    margin:22px;
+    padding:10px 30px;
+    cursor:pointer;
+    font-weight:600;
+  }
+  display:flex;
+  justify-content: flex-end;
+}
 nav {
     background-color:black;
     font-family:Track;
