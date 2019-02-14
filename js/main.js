@@ -1,3 +1,11 @@
+$( document ).ready(function() {
+    $(".hide-everything").fadeOut(300);
+    setTimeout(function() {
+        $(".loading").fadeOut(300);
+    $(".hide-everything").fadeIn(300);
+    }, 2000)
+});
+
 var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
