@@ -1,13 +1,13 @@
-$(".hide-everything").show();
-$(".loading").hide();
+// $(".hide-everything").show();
+// $(".loading").hide();
 
-// $( document ).ready(function() {
-//     $(".hide-everything").fadeOut(300);
-//     setTimeout(function() {
-//         $(".loading").fadeOut(300);
-//     $(".hide-everything").fadeIn(300);
-//     }, 2000)
-// });
+$( document ).ready(function() {
+    $(".hide-everything").fadeOut(300);
+    setTimeout(function() {
+        $(".loading").fadeOut(300);
+    $(".hide-everything").fadeIn(300);
+    }, 2000)
+});
 
 var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
