@@ -162,6 +162,9 @@ h1 {
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s; }
 
+.wrapper-2 .data .content, .wrapper-3 .data .content {
+  background-color: black; }
+
 .card .data .content {
   padding: 1em;
   position: relative;
@@ -190,6 +193,13 @@ h1 {
 
 .example-1 .wrapper {
   background: url("../img/anime1.jpg") 20% 1%/cover no-repeat; }
+
+button:active {
+  outline: none !important;
+  border: none !important; }
+
+button:focus {
+  outline: 0 !important; }
 
 .example-1 .date {
   position: absolute;
@@ -356,6 +366,9 @@ h1 {
   -webkit-transform: translate(5px, -50%);
   transform: translate(5px, -50%);
   opacity: 1; }
+
+.btn-sc {
+  font-size: 17px; }
 
 /* ==========================================================================
    Helper classes
@@ -948,7 +961,8 @@ ul, ol {
 .remove-item {
   background-color: #da0006;
   border: none;
-  color: white; }
+  color: white;
+  font-weight: 700; }
 
 .img-shopping-cart {
   height: 100%;

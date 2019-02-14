@@ -1,3 +1,6 @@
+$(".hide-everything").show();
+$(".loading").hide();
+
 // $( document ).ready(function() {
 //     $(".hide-everything").fadeOut(300);
 //     setTimeout(function() {
@@ -27,15 +30,16 @@ var imageName;
 
 $(".book-hinge").on('click', function() {
 
-    setTimeout(function() {
-        thisIs.css('visibility','hidden');
-        thisIs.removeClass('animate hinge');
-    }, 2000);
+    // setTimeout(function() {
+    //     thisIs.css('visibility','hidden');
+    //     thisIs.removeClass('animate hinge');
+    // }, 2000);
 
     thisIs = $(this);
+    thisIs.css('visibility','hidden');
     var dataNr = $(this).attr('data-nr');
     imageName = $(this).find('img').attr('src');
-    $(this).addClass('animate hinge');
+    // $(this).addClass('animate hinge');
 
 
 
@@ -109,15 +113,13 @@ $(".book-hinge").on('click', function() {
 
 })
 
-
-
-
-
-
-
 $(".shopping-cart").hide();
 $(".shopping-cart-box").hide();
 
 $(".shopping-cart").on('click', function() {
     $(".shopping-cart-box").slideToggle();
 });
+
+var date = new Date();
+var year = date.getFullYear();
+$(".copyright-year").text(year);
