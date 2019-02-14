@@ -925,10 +925,42 @@ ul, ol {
   flex-direction: column; }
 
 .news-div {
-  margin-top: 10%;
   margin-bottom: 10%; }
 
 .box-button {
   align-items: center; }
+
+.times-and-tickets {
+  font-size: 15px;
+  width: 100%;
+  background-color: #da0006;
+  color: white;
+  padding: 10px;
+  cursor: pointer; }
+  .times-and-tickets span {
+    white-space: pre; }
+
+.title-and-date-div {
+  border: 1px solid #494949;
+  padding: 10px;
+  border-top: none; }
+
+.remove-item {
+  background-color: #da0006;
+  border: none;
+  color: white; }
+
+.img-shopping-cart {
+  height: 100%;
+  width: 100%; }
+
+.shopping-cart-descr {
+  padding-left: 0px !important;
+  padding-top: 20px; }
+
+.btn-sc {
+  background-color: #da0006;
+  color: white;
+  border: none; }
 
 /*# sourceMappingURL=main.css.map */

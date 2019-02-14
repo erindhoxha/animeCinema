@@ -13,7 +13,7 @@ xhttp.open("GET", "http://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQ
 xhttp.send();
 
 var thisIs;
-var count = 0;
+var countOfShoppingCart = 0;
 var imageName;
 
 
@@ -26,23 +26,27 @@ $(".book-hinge").on('click', function() {
 
     var imageObject = {'img': imageName};
     var dataNumber = {'data-nr': dataNr};
+    var count = {'count':0}
 
-    shoppingCart.shoppingCartChild[shoppingCart.shoppingCartChild.length] = {...shoppingCart.shoppingCartChild[shoppingCart.shoppingCartChild.length], ...imageObject, ...dataNumber};
+    shoppingCart.shoppingCartChild[shoppingCart.shoppingCartChild.length] = {...shoppingCart.shoppingCartChild[shoppingCart.shoppingCartChild.length], ...imageObject, ...dataNumber, ...count};
 
     $("#shopping-cart-box").empty();
     renderCartList();
     $(this).css('visibility','hidden');
     console.log(dataNr);
-    count++;
+    countOfShoppingCart++;
     $(".shopping-cart").show(200);
-    $(".badge-shopping-cart").text(count);
+    $(".badge-shopping-cart").text(countOfShoppingCart);
     if ($("#shopping-cart-box").children().length == 0) {
         shoppingCart.shoppingCartChild = [];
     }
     $(".remove-item").on('click', function() {
-
-        count--;
-        $(".badge-shopping-cart").text(count);
+        if (countOfShoppingCart == 0) {
+            countOfShoppingCart = 0;
+        } else {
+            countOfShoppingCart--;
+        }
+        $(".badge-shopping-cart").text(countOfShoppingCart);
 
         var dataNr = $(this).parent().parent().parent().attr('data-nr');
         var dataIndex = $(this).parent().parent().parent().attr('data-index');
@@ -59,7 +63,36 @@ $(".book-hinge").on('click', function() {
 
     $(".book-hinge").removeClass('animate hinge') 
     thisIs.css('visibility','hidden');
+
+    $(".button-minus-sp").on('click', function(){
+        var dataNr = $(this).parent().parent().parent().attr('data-index');
+        var countNr = parseInt($("#count-book-" + dataNr).text());
+        if (countNr == 0) {
+            countNr = 0;
+        } else {
+            countNr--;
+        }
+        $("#count-book-" + dataNr).text(countNr);
+        console.log(dataNr);
+        console.log(countNr);
+    });
+    $(".button-plus-sc").on('click', function(){
+        var dataNrOfObj = $(this).parent().parent().parent().attr('data-index');
+        var dataNr = $(this).parent().parent().parent().attr('data-index');
+        var countNr = parseInt($("#count-book-" + dataNr).text());
+        shoppingCart.shoppingCartChild[dataNr].count++;
+        if (countNr > 9) {
+            countNr = 10;
+            $("#count-book-" + dataNr).text(countNr + ' is the max to order.');
+        } else {
+            countNr++;
+            $("#count-book-" + dataNr).text(countNr);
+        }
+        console.log(dataNr);
+        console.log(countNr);
+    });
 })
+
 
 
 

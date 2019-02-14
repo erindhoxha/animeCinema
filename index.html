@@ -326,16 +326,16 @@
   {{#each shoppingCartChild}}
   <div class="col-lg-12 col-md-2 shopping-cart-div" data-index={{@index}} data-nr={{data-nr}}>
     <div class="row">
-    <div class="col-lg-3 col-md-6 text-white">
-    <img class="" src="{{img}}" height="100" alt="" />
+    <div class="col-lg-3 col-md-3 col-3 text-white">
+    <img class="img-shopping-cart" src="{{img}}"  height="100" alt="" />
     </div>
-    <div class="col-lg-5 text-white">
-        <h6>Naruto Book</h6>
-        <button>+</button>
-        <button>-</button>
+    <div class="col-lg-6 col-6 text-white shopping-cart-descr">
+        <h6>Naruto Book x <span id="count-book-{{@index}}">{{count}}</span></h6>
+        <button class="button-minus-sp btn-sc">-</button>
+        <button class="button-plus-sc btn-sc">+</button>
     </div>
-    <div class="col-lg-4 col-md-6 text-white d-flex box-button">
-        <button class="remove-item">Remove Item</button>
+    <div class="col-lg-3 col-md-3 col-3 text-white d-flex box-button">
+        <button class="remove-item">Remove</button>
     </div>
   </div>
   </div>
@@ -347,12 +347,17 @@
 
 <script id="movies-anime" type="text/x-handlebars-template">
   {{#each animeMovieList}}
-  <div class="col-lg-2 col-sm-4 mt-2 col-4 text-center">
+  <div class="col-lg-2 col-sm-4 mt-2 col-4 mb-5 text-center">
       <a href="{{href}}">
         <img class="img-list" style="width:100%" src="{{img}}" alt="">
-      </a>
+      </a> 
+      <div class="times-and-tickets">
+        <span>Times and tickets <i class="fas fa-ticket-alt"></i></span> 
+      </div>
+      <div class="title-and-date-div">
       <p class="m-0 p-0">{{title}}</p>
       <small class="m-0 p-0">{{date}}</small>
+    </div>
     </div>
   {{/each}}
 </script>

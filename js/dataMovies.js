@@ -22,7 +22,7 @@ var animeMovieListParent = {
         },
         {
             img:'img/anime-list5.jpeg',
-            title:'Howl\'s Moving Castle',
+            title:'Howl\'s Moving',
             date:'2016'
         },
         {

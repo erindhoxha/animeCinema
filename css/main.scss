@@ -1047,9 +1047,43 @@ $grad5: darken($darktan, 4);
   flex-direction: column;
 }
 .news-div {
-margin-top:10%;
 margin-bottom:10%;
 }
 .box-button {
   align-items:center;
+}
+.times-and-tickets {
+  span {
+    white-space: pre;
+  }
+  font-size:15px;
+  width:100%;
+  background-color:$main-color;
+  color:white;
+  padding:10px;
+  cursor:pointer;
+}
+.title-and-date-div {
+  border:1px solid rgb(73, 73, 73);
+  padding:10px;
+  border-top:none;
+}
+.remove-item {
+  background-color:$main-color;
+  border:none;
+  color:white;
+}
+.img-shopping-cart {
+  height:100%;
+  width:100%;
+}
+.shopping-cart-descr {
+  padding-left:0px !important;
+  padding-top:20px;
+}
+
+.btn-sc {
+  background-color:$main-color;
+  color:white;
+  border:none;
 }
