@@ -20,7 +20,6 @@ html {
     font-size: 1em;
     line-height: 1.4;
 }
-
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -116,7 +115,7 @@ textarea {
 }
 nav {
     background-color:black;
-    font-family:Track;
+    font-family:Track, Montserrat;
 }
 
 .overlay {
@@ -591,6 +590,7 @@ button:active {
     }
 }
 .banner-bg-hero {
+  min-height:600px;
   height:70vh;
   background-color:white;
   background-position:center;
@@ -794,7 +794,7 @@ nav {
   margin: 2rem 0 1rem;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   text-transform: uppercase;
-  font-family: Track;
+  font-family: Track, Montserrat;
 }
 .slider__txt {
   color: #999;
@@ -878,7 +878,7 @@ nav {
   align-items:center;
 }
 h1.quote {
-  font-family: "Track";
+  font-family: "Track", "Montserrat";
   text-transform: uppercase;
   font-size: 21px;
   text-align:center;
@@ -916,7 +916,7 @@ h1.quote {
   color:$main-color;
   padding:10px 20px;
   margin-top:20px;
-  font-family: Track;
+  font-family: Track, Montserrat;
   cursor:pointer;
   transition:0.3s ease-out;
 }
@@ -1224,5 +1224,7 @@ margin-bottom:10%;
   -webkit-animation: showText 1.5s ease; /* Safari 4.0 - 8.0 */
   animation: showText 1.5s ease;
 }
-.st5{font-family:'Track-Regular';}
+.st5{font-family:'Track-Regular', Montserrat;}
 .st6{font-size:71.9719px;}
+
+

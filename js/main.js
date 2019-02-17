@@ -6,7 +6,7 @@ $( document ).ready(function() {
     setTimeout(function() {
         $(".loading").fadeOut(300);
     $(".hide-everything").fadeIn(300);
-    }, 2000)
+    }, 1200)
 });
 
 var xhttp = new XMLHttpRequest();
